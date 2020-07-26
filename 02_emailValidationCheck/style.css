@@ -3,7 +3,7 @@
 * 
 {
   margin: 0;
-  padding: 0em;
+  padding: 0;
   font-family: 'Red Rose', cursive;
 }
 body 
@@ -16,7 +16,7 @@ body
 }
 h3
 {
-  position: relative;
+  position: relative; /*body를 기준으로*/
   font-size: 20px;
   color: white;
   letter-spacing: 1px;
@@ -25,7 +25,7 @@ h3
 }
 #form
 {
-  position: relative;
+  position: relative; /*body를 기준으로*/
 }
 #form #email
 {
@@ -40,7 +40,7 @@ h3
 }
 #form #inputBox
 {
-  position: relative;
+  position: relative; /*form에 소속*/
 }
 #text
 {
@@ -48,9 +48,9 @@ h3
   color: #000;
   font-weight: 300;
   font-style: italic;
-  /* padding: 5px; */
+  padding: 5px;
 }
-#form.invalid .inputBox:before{
+#form.invalid .inputBox:before{ /*inputBox는 왜 붙인걸까?*/
   content: '';
   position: absolute;
   right: 12px;
@@ -63,7 +63,7 @@ h3
 }
 #form.valid .inputBox:before{
   content: '';
-  position: absolute;
+  position: absolute;  /*form이 relative이기 때문에 form을 기준으로 배치. */
   right: 12px;
   top: 7px;
   width: 24px;

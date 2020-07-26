@@ -12,7 +12,7 @@
     <form id="form" action="#">
       <div class="inputBox">
         <input type="text" name="" id="email" 
-        placeholder="Enter Email Address" onkeydown="validation()">
+        placeholder="Enter Email Address" onkeydown="validation()"> <!--user가 키누르면 함수실행-->
         <span id="text"></span>
       </div>
     </form>
@@ -28,14 +28,14 @@
       if (email.match(pattern))
       {
        form.classList.add("valid");
-       form.classList.remove("invalid");
+       form.classList.remove("invalid"); // 꼭필요한가?
        text.innerHTML = "Your Email Address in Valid.";
        text.style.color = "#00ff00";
       }
       else
       {
         form.classList.remove("valid");
-        form.classList.add("invalid");
+        form.classList.add("invalid"); // 꼭필요한가?
         text.innerHTML = "Please Enter Valid Email Address.";
         text.style.color = "#ff0000";
       }
