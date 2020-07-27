@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PUBG Fun with bullet sound</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <section></section>
+  <audio id="audio" src="imgs/sound.wav" autostart="false"></script>
+</body>
+<script type="text/javascript">
+  document.addEventListener("click", function(e)
+  {
+    var body = document.querySelector("body");
+    var bullet = document.createElement("span");
+    var x = e.offsetX;    // 패딩의 끝부터 누른부분까지의 x좌표
+    var y = e.offsetY;    // 패딩의 끝부터 누른부분까지의 y좌표
+    bullet.style.left = x+'px';
+    bullet.style.top = y+'px';
+    body.appendChild(bullet);
+    
+    var audio = document.getElementById('audio');
+    audio.play();
+  });
+</script>
+  
+</html>
